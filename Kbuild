@@ -1899,6 +1899,10 @@ ifeq ($(CONFIG_SPECTRAL_SCAN), y)
 CDEFINES += -DWLAN_SPECTRAL_SCAN
 endif
 
+ifeq ($(CONFIG_FORCE_CRYPTO_INTERNAL), y)
+CDEFINES += -DFORCE_CRYPTO_INTERNAL
+endif
+
 # Module information used by KBuild framework
 ifeq ($(CONFIG_FEATURE_LARGE_PREALLOC),y)
 obj-$(CONFIG_QCA_CLD_WLAN) += wlan_prealloc.o
