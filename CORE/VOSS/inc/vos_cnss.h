@@ -55,6 +55,8 @@ enum cnss_cc_src {
 	CNSS_SOURCE_USER
 };
 #ifdef HIF_PCI
+#include <linux/pci.h>
+
 static inline void vos_wlan_pci_link_down(void){ return; }
 static inline int vos_pcie_shadow_control(struct pci_dev *dev, bool enable)
 {

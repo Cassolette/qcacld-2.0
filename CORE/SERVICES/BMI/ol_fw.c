@@ -3339,7 +3339,9 @@ int ol_target_coredump(void *inst, void *memoryBlock, u_int32_t blockLength)
 	uint32_t sectionCount = 0;
 	uint32_t pos = 0;
 	uint32_t readLen = 0;
+#ifdef FW_RAM_DUMP_TO_FILE
 	char fw_dump_filename[40];
+#endif
 
 #ifdef CONFIG_NON_QC_PLATFORM_PCI
 	char *fw_ram_seg_name[] = {"DRAM ", "AXI ", "REG ", "IRAM1 ", "IRAM2 "};
